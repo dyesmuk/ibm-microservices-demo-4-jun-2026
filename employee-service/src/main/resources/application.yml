@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: employee-service        # This name registers in Eureka
+
+  datasource:
+    url: jdbc:h2:mem:employeedb   # In-memory H2 database
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true               # Browse at http://localhost:8081/h2-console
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop       # Schema created fresh every startup
+    show-sql: true
+
+  data:
+    rest:
+      base-path: /                # Spring Data REST serves from root
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

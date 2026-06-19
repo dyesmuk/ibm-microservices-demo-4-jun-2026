@@ -1,0 +1,161 @@
+# =====================================================================
+# EMS Microservices — .gitignore
+# Covers: Java, Maven, Spring Boot, H2, IntelliJ, Eclipse, VS Code,
+#         macOS, Windows, Linux
+# =====================================================================
+
+
+# ── Maven ─────────────────────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper (keep the wrapper JAR, ignore downloaded Maven)
+.mvn/wrapper/maven-wrapper.properties
+# Uncomment the line below if you DO want to commit the wrapper properties:
+# !.mvn/wrapper/maven-wrapper.properties
+
+
+# ── Spring Boot ───────────────────────────────────────────────────────
+# Packaged JARs/WARs — never commit binaries
+*.jar
+*.war
+*.ear
+*.nar
+
+# Spring Boot dev tools restart trigger
+.spring-boot-devtools.properties
+
+# Log files generated at runtime
+logs/
+*.log
+*.log.*
+spring.log
+
+
+# ── H2 Database files ─────────────────────────────────────────────────
+# If you ever switch from in-memory (mem:) to file-based H2 (file:)
+*.db
+*.mv.db
+*.trace.db
+data/
+
+
+# ── Java compiled output ──────────────────────────────────────────────
+*.class
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+
+# ── IntelliJ IDEA ─────────────────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+# Uncomment to ignore IntelliJ module files:
+# *.iml
+
+# IntelliJ shelf (local code changes stash)
+shelf/
+
+
+# ── Eclipse / Spring Tool Suite (STS) ────────────────────────────────
+.classpath
+.project
+.settings/
+.loadpath
+.recommenders
+bin/
+
+# Eclipse Checkstyle / FindBugs output
+.checkstyle
+.fbWarnings
+
+# Eclipse Maven plugin
+.factorypath
+
+
+# ── VS Code ───────────────────────────────────────────────────────────
+.vscode/
+# Keep .vscode/settings.json if your team shares editor config:
+# !.vscode/settings.json
+# !.vscode/extensions.json
+
+
+# ── NetBeans ──────────────────────────────────────────────────────────
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# ── macOS ─────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+
+# ── Windows ───────────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+
+# ── Linux ─────────────────────────────────────────────────────────────
+*~
+.nfs*
+
+
+# ── Environment & Secrets ─────────────────────────────────────────────
+# NEVER commit credentials, API keys, or environment-specific config
+.env
+.env.*
+*.env
+application-local.yml
+application-local.properties
+application-secret.yml
+application-secret.properties
+secrets/
+
+
+# ── Test output ───────────────────────────────────────────────────────
+surefire-reports/
+failsafe-reports/
+test-results/
+
+
+# ── Coverage & Quality tools ──────────────────────────────────────────
+.jacoco/
+jacoco.exec
+jacoco-report/
+.sonar/
+.scannerwork/
+
+
+# ── Docker (if added later) ───────────────────────────────────────────
+# Uncomment when you add Docker support:
+# .docker/
+# docker-compose.override.yml
